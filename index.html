@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html> <!-- istg i didnt skid this -->
+
+<head>
+  <style>
+    body {
+      background-color: black;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .sidebar {
+      height: 55px;
+      width: 100%;
+      background-color: #7f24ff;
+
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sidebar button {
+      width: 40px;
+      height: 40px;
+      background-color: #7f24ff;
+
+      color: white;
+      border: none;
+      border-radius: 30%;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    .sidebar button:hover {
+      background-color: #6c13e8;
+
+    }
+
+    .sidebar img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .text {
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 22px;
+      font-family: 'Source Code Pro', sans-serif;
+      text-align: center;
+      color: white;
+    }
+
+    .text a {
+      color: #ffffff;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 70%;
+      background-color: rgba(0, 0, 0, 0.4);
+      -webkit-transition: opacity 0.3s ease-in-out;
+      -moz-transition: opacity 0.3s ease-in-out;
+      transition: opacity 0.3s ease-in-out;
+      opacity: 0;
+    }
+    
+    .modal.show {
+      display: block;
+      opacity: 1;
+    }
+
+    .modal-content {
+      background-color: #121212;
+      margin: 15% auto;
+
+      padding: 20px;
+      border: 0px solid #888;
+      width: 15%;
+
+      border-radius: 15px;
+
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sidebar">
+    <button onclick="window.location.href='https://discord.gg/enough'">
+      <img src="server.ico" alt="discord server">
+    </button>
+    <button id="myBtn">
+      <img src="discord.ico" alt="discord account">
+    </button>
+  </div>
+  <div id="myModal" class="modal">
+
+    <div class="modal-content">
+      <span class="close"></span>
+      <p style="color:white">$ mert#1337 / 1045410408275648632 is my current discord acount</p>
+    </div>
+  </div>
+  <center><p style="margin-top: 18%"><img src="earth-landmask-256-fast.gif"></p></center>
+  
+  <script>
+
+    var modal = document.getElementById("myModal");
+
+    var btn = document.getElementById("myBtn");
+
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function () {
+      modal.style.display = "block";
+      modal.classList.add("show");
+    }
+
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+
+
+</body>
+
+</html>
